@@ -1,4 +1,4 @@
-<script setup lang="ts"></script>
+
 
 <template>
     <footer class="border-t bg-white fixed inset-x-0 bottom-0">
@@ -16,7 +16,7 @@
                 <span
                 :class="selectedPage === page.name ? 'text-green-500 font-bold' : 'text-gray-500'"
                 >
-                {{ page.name }}
+                {{ $t(`footer.${page.name}`) }}
                 </span>
             </button>
         </div>
@@ -26,21 +26,22 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-
+const localPath = useLocalePath();
 // 定義當前選中的導航按鈕
-const selectedPage = ref("接駁");
+const selectedPage = ref("shuttle");
 
 // 定義導航項目
 const pages = [
-  { name: "接駁", icon: "material-symbols-directions-car", route: "/" },
-  { name: "包車", icon: "mdi-bus", route: "/" },
-  { name: "接送", icon: "mdi-car-search-outline", route: "/" },
-  { name: "我的", icon: "material-symbols-person-2-outline", route: "/profile" },
+  { name: "shuttle", icon: "material-symbols-directions-car", route: "/" },
+  { name: "charter", icon: "mdi-bus", route: "/" },
+  { name: "pickup", icon: "mdi-car-search-outline", route: "/" },
+  { name: "profile", icon: "material-symbols-person-2-outline", route: "/profile" },
 ];
 
 // 切換選中的導航按鈕
 const selectPage = (pageName: string, route: string) => {
   selectedPage.value = pageName;
-  navigateTo(route); // 使用 Nuxt 的 `navigateTo` 方法進行導航
+  const selectedRoute = localPath(route);
+  navigateTo(selectedRoute); // 使用 Nuxt 的 `navigateTo` 方法進行導航
 };
 </script>

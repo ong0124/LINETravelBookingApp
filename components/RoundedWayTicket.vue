@@ -1,14 +1,14 @@
 <template>
     <div class="flex-col p-4">
         <div>
-            <p class="border-l-4 my-3 border-orange-400 text-justify pl-2">去程</p>
+            <p class="border-l-4 my-3 border-orange-400 text-justify pl-2">{{ $t('Booking.outward') }}</p>
         </div>
         <div class="flex justify-around">
                 <div class="flex"><Icon name="i-material-symbols-directions-car" class="bg-gray-500 w-6 h-6"/>
-                  <p class="flex-1 text-gray-500 ml-2">出發地點</p>
+                  <p class="flex-1 text-gray-500 ml-2">{{ $t('Booking.departure') }}</p>
                 </div>
                 <div class="flex"><Icon name="i-mdi-map-marker-radius-outline" class="bg-gray-500 w-6 h-6"/>
-                  <p class="flex-1 text-gray-500 ml-2">抵達地點</p>
+                  <p class="flex-1 text-gray-500 ml-2">{{ $t('Booking.arrival') }}</p>
                 </div>
               </div>
               <div class="flex justify-evenly">
@@ -20,7 +20,7 @@
               <div class="border-b-2 py-3"></div>
               <div class="flex pt-3 pl-4">
                 <Icon name="i-majesticons-ship-line" class="bg-green-300 w-6 h-6"></Icon>
-                <p class="text-green-300">抵達碼頭時間</p>
+                <p class="text-green-300">{{ $t('Booking.arrivalPortTime') }}</p>
               </div>
               <div class="flex pt-2 pl-4 space-x-4">
                 <DatePicker/>
@@ -28,7 +28,7 @@
               </div>
               <div class="flex pt-3 pl-4">
                 <Icon name="i-material-symbols-directions-car" class="bg-green-300 w-6 h-6"></Icon>
-                <p class="text-green-300">接駁車發車時間</p>
+                <p class="text-green-300">{{ $t('Booking.shuttleBusTime') }}</p>
               </div>
               <div class="flex pt-2 pl-4 space-x-4">
                 <DatePicker />
@@ -36,13 +36,13 @@
               </div>
               <div class="border-b-2 py-3"></div>
 
-                <p class="border-l-4 my-3 border-orange-400 text-justify pl-2">返程</p>
+                <p class="border-l-4 my-3 border-orange-400 text-justify pl-2">{{ $t('Booking.return') }}</p>
                 <div class="flex justify-around">
                 <div class="flex"><Icon name="i-material-symbols-directions-car" class="bg-gray-500 w-6 h-6"/>
-                  <p class="flex-1 text-gray-500 ml-2">出發地點</p>
+                  <p class="flex-1 text-gray-500 ml-2">{{ $t('Booking.departure') }}</p>
                 </div>
                 <div class="flex"><Icon name="i-mdi-map-marker-radius-outline" class="bg-gray-500 w-6 h-6"/>
-                  <p class="flex-1 text-gray-500 ml-2">抵達地點</p>
+                  <p class="flex-1 text-gray-500 ml-2">{{ $t('Booking.arrival') }}</p>
                 </div>
               </div>
               <div class="flex justify-evenly">
@@ -54,7 +54,7 @@
               <div class="border-b-2 py-3"></div>
               <div class="flex pt-3 pl-4">
                 <Icon name="i-majesticons-ship-line" class="bg-green-300 w-6 h-6"></Icon>
-                <p class="text-green-300">抵達碼頭時間</p>
+                <p class="text-green-300">{{ $t('Booking.arrivalPortTime') }}</p>
               </div>
               <div class="flex pt-2 pl-4 space-x-4">
                 <DatePicker/>
@@ -62,23 +62,16 @@
               </div>
               <div class="flex pt-3 pl-4">
                 <Icon name="i-material-symbols-directions-car" class="bg-green-300 w-6 h-6"></Icon>
-                <p class="text-green-300">接駁車發車時間</p>
+                <p class="text-green-300">{{ $t('Booking.shuttleBusTime') }}</p>
               </div>
               <div class="flex pt-2 pl-4 space-x-4">
                 <DatePicker />
                 <TimePicker />
               </div>
               <DashLine/>
-
-              <div class="flex pl-6 pt-3">
-                <p class="flex-1">票價</p>
-                <p class="flex-1">$30 /人</p>
-                <p class="flex-1"></p>
-              </div>
-
               <div class="flex pl-6 pt-2 justify-evenly content-center">
                 <div class="flex flex-1">
-                  <p class="flex-1">成人票</p>
+                  <p class="flex-1">{{ $t('Booking.adultTicket') }}</p>
                   <div class="flex-1 flex ">
                   <button @click="decrement('adult')">
                   <Icon name="i-mdi-minus-circle-outline"/></button>
@@ -89,7 +82,7 @@
                   </div>
                 </div>
                 <div class="flex flex-1">
-                  <p class="flex-1">嬰兒票(&lt;= 2嵗)</p>
+                  <p class="flex-1">{{ $t('Booking.childTicket') }}</p>
                   <div class="flex-1 flex">
                   <button @click="decrement('child')">
                   <Icon name="i-mdi-minus-circle-outline"/></button>
@@ -101,8 +94,15 @@
                 </div>
               </div>
 
+              <div class="flex pl-6 pt-3">
+                <p class="flex-1">{{ $t('Booking.ticketPrice') }}</p>
+                <p class="flex-1">&yen; {{ totalPrice }}{{ $t('Booking.pricePerPerson') }}</p>
+                <p class="flex-1"></p>
+              </div>
+
+
               <div class="flex py-4 px-6 content-center">
-                <p class="flex-none pr-6">聯係人</p>
+                <p class="flex-none pr-6">{{ $t('Booking.contact') }}</p>
                 <input
                   type="text"
                   placeholder="必填"
@@ -110,7 +110,7 @@
               </div>
 
               <div class="flex py-4 px-6 content-center">
-                <p class="flex-none pr-2">聯係電話</p>
+                <p class="flex-none pr-2">{{ $t('Booking.phone') }}</p>
                 <input
                   type="text"
                   placeholder="必填"
@@ -129,17 +129,24 @@ export default defineComponent({
       isSwapped: false,
       onwardTrip: {
         p2: "金門水頭碼頭",
-        p3: "金門商議機場",
+        p3: "金門尚義機場",
       },
       returnTrip: {
-        p2: "金門商議機場",
+        p2: "金門尚義機場",
         p3: "金門水頭碼頭",
       },
       counts:{
       adult: 1,
       child: 1
       },
+      pricePerTicket:30,
     };
+  },
+  computed: {
+    totalPrice(): number {
+      // 總票價動態計算
+      return (this.counts.adult) * this.pricePerTicket;
+    },
   },
   methods: {
     swapText() {

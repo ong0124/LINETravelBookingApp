@@ -1,0 +1,98 @@
+{
+    "language": "繁體中文",
+    "title": "接駁車",
+
+    "footer": {
+      "shuttle": "接駁",
+      "charter": "包車",
+      "pickup": "接送",
+      "profile": "我的"
+    },
+
+  "HomePage":{
+  "oneWay": "單程",
+  "roundTrip": "往返",
+  "readAgreement": "我已閲讀并同意",
+  "terms": "《接駁車訂票須知》",
+  "confirm": "確認",
+  "notification": {
+    "title": "提示信息",
+    "description": "请阅读并勾选《接驳车订票须知》后再确认。"
+    }
+  },
+
+  "Booking": {
+    "departure": "出發地點",
+    "arrival": "抵達地點",
+    "arrivalPortTime": "抵達碼頭時間",
+    "shuttleBusTime": "接駁車發車時間",
+    "ticketPrice": "票價",
+    "adultTicket": "成人票",
+    "childTicket": "嬰兒票(<= 2嵗)",
+    "contact": "聯係人",
+    "phone": "聯係電話",
+    "required": "必填",
+    "pricePerPerson": " /人",
+    "outward": "去程",
+    "return": "返程"
+  },
+
+  "profile": {
+    "nickname": "昵稱",
+    "userId": "用戶ID/賬號",
+    "editProfile": "編輯資料",
+    "logout": "退出登錄"
+  },
+  "bookingStatus": {
+    "toPay": "待付款",
+    "notTraveled": "未出行",
+    "refunded": "已退款",
+    "all": "全部"
+  },
+  "profileSettings": {
+    "changePassword": "修改密碼",
+    "systemSettings": "系統設置",
+    "contactSupport": "聯係客服",
+    "feedback": "意見反饋"
+  },
+  "paymentPage": {
+    "title": "請你支付",
+    "choose_method": "選擇支付方式",
+    "credit_card": "信用卡",
+    "pay_button": "支付"
+  },
+  "confirmationPage":{
+    "title": "訂單確認",
+    "tripInfo":"行程信息",
+    "dateTime": "01月02日星期四 11:30",
+    "departure": "水頭碼頭",
+    "destination": "尚義機場",
+    "OrderTotal":"訂單總價",
+    "refundPolicy": "退改説明",
+    "adultTicket": "全票 x 1",
+    "infantTicket": "嬰兒票 x 1",
+    "total": "合計",
+    "currency": "¥",
+    "amount": "30.00",
+    "submitOrder": "提交訂單",
+    "footer": {
+    "notice": "溫馨提示:",
+    "tips": [
+      "1. 請確認購票信息准確無誤。",
+      "2. 接駁車線上購票截止時間為前一天20:00。",
+      "3. 金門碼頭至機場預計車程為15-20分鐘，為避免影響行程，航班到達時間與出發時間請至少間隔90分鐘，請您提前合理規劃出行方式並妥善安排好出行時間和具體線路，以便有充足時間辦理值機、托運、安檢等乘機手續，否則由此造成的損失和不便由旅客自行承擔。",
+      "4. 線上退票截止時間為發車時間前90分鐘。",
+      "5. 車票當日有效。逾期未使用的車票，系統將於3-5個工作日內自動退回到原支付渠道上。"
+    ]
+  }
+  },
+  "accountInfo": {
+    "title": "賬號信息",
+    "userId": "用戶ID",
+    "nickname": "昵稱",
+    "phone": "電話",
+    "email": "郵箱",
+    "saveButton": "保存"
+  }
+}
+  

@@ -1,0 +1,99 @@
+{
+  "language": "English",
+  "title": "Shuttle Bus",
+
+  "footer": {
+    "shuttle": "Shuttle",
+    "charter": "Charter",
+    "pickup": "Pickup",
+    "profile": "My Profile"
+  },
+
+  "HomePage":{
+    "oneWay": "One Way",
+    "roundTrip": "Round Trip",
+    "readAgreement": "I have read and agree to",
+    "terms": "《Shuttle Bus Ticketing Notes》",
+    "confirm": "Confirm",
+    "notification": {
+    "title": "Notification",
+    "description": "Please read and check the box before confirming."
+    }
+  },
+
+  "Booking": {
+    "departure": "Departure Location",
+    "arrival": "Arrival Location",
+    "arrivalPortTime": "Arrival Port Time",
+    "shuttleBusTime": "Shuttle Bus Departure Time",
+    "ticketPrice": "Ticket Price",
+    "adultTicket": "Adult Ticket",
+    "childTicket": "Infant Ticket (<= 2 years)",
+    "contact": "Contact Person",
+    "phone": "Contact Number",
+    "required": "Required",
+    "pricePerPerson": " / person",
+    "outward": "Outward",
+    "return": "Return"
+  },
+  
+  "profile": {
+    "nickname": "Nickname",
+    "userId": "User ID/Account",
+    "editProfile": "Edit Profile",
+    "logout": "Logout"
+  },
+  "bookingStatus": {
+    "toPay": "To Pay",
+    "notTraveled": "Not Traveled",
+    "refunded": "Refunded",
+    "all": "All"
+  },
+  "profileSettings": {
+    "changePassword": "Change Password",
+    "systemSettings": "System Settings",
+    "contactSupport": "Contact Support",
+    "feedback": "Feedback"
+  },
+  "paymentPage": {
+    "title": "Please Pay",
+    "choose_method": "Choose Payment Method",
+    "credit_card": "Credit Card",
+    "pay_button": "Pay"
+  },
+  "confirmationPage":{
+    "title": "Order Confirmation",
+    "tripInfo":"Trip Information",
+    "dateTime": "Thursday, January 2nd, 11:30 AM",
+    "departure": "Shuitou Pier",
+    "destination": "Shangyi Airport",
+    "OrderTotal":"Order Total",
+    "refundPolicy": "Refund Policy",
+    "adultTicket": "Adult Ticket x 1",
+    "infantTicket": "Infant Ticket x 1",
+    "total": "Total",
+    "currency": "¥",
+    "amount": "30.00",
+    "submitOrder": "Submit Order",
+    "footer": {
+    "notice": "Kind Reminder:",
+    "tips": [
+      "1. Please make sure the ticket information is correct.",
+      "2. Online ticket booking for shuttle buses closes at 8:00 PM the day before.",
+      "3. The estimated travel time from Kinmen Pier to the airport is 15-20 minutes. To avoid affecting your trip, ensure there is at least a 90-minute interval between flight arrival and departure times. Plan your trip carefully and allow enough time for check-in, baggage drop-off, and security procedures. Any inconvenience or loss caused by insufficient time will be borne by the passenger.",
+      "4. Online ticket refunds are available up to 90 minutes before the departure time.",
+      "5. Tickets are valid only on the day of the trip. Unused tickets will be automatically refunded to the original payment channel within 3-5 business days."
+    ]
+  }
+  },
+  "accountInfo": {
+    "title": "Account Information",
+    "userId": "User ID",
+    "nickname": "Nickname",
+    "phone": "Phone",
+    "email": "Email",
+    "saveButton": "Save"
+  }
+}
+
+  

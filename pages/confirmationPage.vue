@@ -4,37 +4,37 @@
     <header class="flex items-center py-4">
         <Icon name="tabler-arrow-back-up" class="mr-1 bg-white ml-4"/>
         <h1 class="absolute left-1/2 transform -translate-x-1/2 text-base font-bold capitalize text-white ">
-           訂單確認
+            {{ $t('confirmationPage.title') }}
         </h1>
      </header>
     <div class="mx-3 pt-4 pb-8 rounded-lg bg-white">
         <div class="px-4">
             <div class="px-2">
                 <p class="border-l-4 border-orange-400 pl-2">
-                  行程信息
+                    {{ $t('confirmationPage.tripInfo') }}
                 </p>
-                <p class="my-2">01月02日星期四 11:30</p>
+                <p class="my-2">{{ $t('confirmationPage.dateTime') }}</p>
                 <div class="flex ">
-                    <p>水頭碼頭</p>
+                    <p>{{ $t('confirmationPage.departure') }}</p>
                     <Icon name="material-symbols-arrow-right-alt" class="mx-2 w-6 h-6"></Icon>
-                    <p>尚義機場</p>
+                    <p>{{ $t('confirmationPage.destination') }}</p>
                 </div>
             </div>
            <DashLine/>  
                 <div class="px-2">
                     <div class="flex py-2">
                         <p class="border-l-4 border-orange-400 pl-2 flex-1">
-                            訂單總價
+                            {{ $t('confirmationPage.OrderTotal') }}
                         </p>
-                        <a href="#" class="text-sm text-gray-600 ml-1">退改説明</a>
+                        <a href="#" class="text-sm text-gray-600 ml-1">{{ $t('confirmationPage.refundPolicy') }}</a>
                         </div>
                      <div class="flex">
-                     <p class="flex-1">全票 x 1</p>           
-                     <p>¥&nbsp;30.00</p>
+                     <p class="flex-1">{{ $t('confirmationPage.adultTicket') }}</p>           
+                     <p>{{ $t('confirmationPage.currency') }}&nbsp;{{ $t('confirmationPage.amount') }}</p>
                         </div>
                     <div class="flex">
-                    <p class="flex-1">嬰兒票 x 1</p>
-                    <p>¥&nbsp;0.00</p>
+                    <p class="flex-1">{{ $t('confirmationPage.infantTicket') }}</p>
+                    <p>{{ $t('confirmationPage.currency') }}&nbsp;0.00</p>
                     </div>
                 </div>
            </div>
@@ -51,13 +51,16 @@
     <footer class="border-t bg-white fixed inset-x-0 bottom-0">
         <div class="py-6 mx-6 flex">
             <div class="flex flex-1">
-                <p>合計 &nbsp;: &nbsp;</p>
-                <p class="text-red-500">¥&nbsp;30.00</p>
+                <p>{{ $t('confirmationPage.total') }} &nbsp;  &nbsp;</p>
+                <p class="text-red-500">{{ $t('confirmationPage.currency') }}&nbsp;{{ $t('confirmationPage.amount') }}</p>
             </div>
-            <nuxt-link to="/payment" class="bg-red-500 text-white rounded px-2 py-1">提交訂單</nuxt-link>
+            <NuxtLink :to="localPath('/payment')" class="bg-red-500 text-white rounded px-2 py-1">{{ $t('confirmationPage.submitOrder') }}</NuxtLink>
         </div>
     </footer>
 </div>
 </div>
 </template>
 
+<script setup lang="ts">
+const localPath = useLocalePath();
+</script>

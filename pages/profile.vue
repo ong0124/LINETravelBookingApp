@@ -5,14 +5,14 @@
                 <Avatar class="bg-gray-200"/>
             </div>
             <div class="flex flex-col flex-1">
-                <p>昵稱</p>
+                <p>{{ $t('profile.nickname') }}</p>
                 <div class="flex">
-                        <p class="flex-1">用戶ID/賬號</p>
+                        <p class="flex-1">{{ $t('profile.userId') }}</p>
                             <div class="flex-none">
                                 <button class="flex items-center rounded-x-3xl rounded-l-3xl text-slate-50 text-xs bg-green-300 p-1 "
                                 @click="navigateToEdit">
                                     <Icon name="mdi-rename-box-outline" class="mr-1 w-4 h-4"/>
-                                    編譯資料
+                                    {{ $t('profile.editProfile') }}
                                 </button>
                             </div>
                 </div>
@@ -28,7 +28,7 @@
                 <Icon :name="status.icon"
                 class="w-6 h-6"
                 ></Icon>
-                {{ status.name }}
+                {{ $t(`bookingStatus.${status.name}`) }}
                </button>
             </div>
 
@@ -40,7 +40,7 @@
                     <div class="flex flex-1 ">
                         <div class="flex flex-1 text-sm ">
                             <Icon :name = "settings.icon" class="w-5 h-5 mr-2"/>
-                            {{ settings.name }}
+                            {{ $t('profileSettings.' + settings.name) }}
                         </div>
                         <Icon name="ic-baseline-greater-than" class="w-4 h-4 bg-gray-300"></Icon>  
                     </div>
@@ -49,7 +49,7 @@
                     <div class=" flex p-3 items-center  ">
                             <div class="flex flex-1 text-sm -400 justify-center">
                                 <Icon name = "solar-logout-2-outline" class="w-5 h-5 mr-2 "/>
-                                <p>退出登錄</p>
+                                <p>{{ $t('profile.logout') }}</p>
                             </div>
                     </div>
                 </div>
@@ -62,19 +62,20 @@
 import { ref } from "vue";
 import { useRouter } from 'vue-router';
 
+const localPath = useLocalePath();
 // 定義導航項目
 const BookingStatus = [
-  { name: "待付款", icon: "material-symbols-light-credit-card-clock-outline", route: "/" },
-  { name: "未出行", icon: "material-symbols-calendar-clock-outline-sharp", route: "/" },
-  { name: "已退款", icon: "tabler-credit-card-refund", route: "/" },
-  { name: "全部", icon: "material-symbols-lab-profile-outline", route: "/profile" },
+  { name: "toPay", icon: "material-symbols-light-credit-card-clock-outline", route: "/" },
+  { name: "notTraveled", icon: "material-symbols-calendar-clock-outline-sharp", route: "/" },
+  { name: "refunded", icon: "tabler-credit-card-refund", route: "/" },
+  { name: "all", icon: "material-symbols-lab-profile-outline", route: "/profile" },
 ];
 
 const ProfileSettings =[
-    {name:"修改密碼", icon:"material-symbols-lock-outline-sharp",route:"/"},
-    {name:"系統設置", icon:"hugeicons-settings-03",route:"/"},
-    {name:"聯係客服", icon:"material-symbols-call-log-outline",route:"/"},
-    {name:"意見反饋", icon:"material-symbols-mail-outline",route:"/"},
+    {name:"changePassword", icon:"material-symbols-lock-outline-sharp",route:"/"},
+    {name:"systemSettings", icon:"hugeicons-settings-03",route:"/"},
+    {name:"contactSupport", icon:"material-symbols-call-log-outline",route:"/"},
+    {name:"feedback", icon:"material-symbols-mail-outline",route:"/"},
 ]
 
 // 切換選中的導航按鈕
@@ -85,6 +86,7 @@ const selectStatus = (statusName: string, route: string) => {
 const router = useRouter();
 
 const navigateToEdit = () => {
-    router.push('/editProfile');
+    const path = localPath('/editProfile');
+    router.push(path);
 };
 </script>
