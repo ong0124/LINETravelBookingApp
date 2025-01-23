@@ -60,5 +60,10 @@ export default defineNuxtConfig({
         base: './.nitro/cache', // 設定緩存文件的基準路徑
       },
     },
+    prerender: {
+      routes: [
+        '/LINETravelBookingApp/'
+      ],
+    },
   },
 })
