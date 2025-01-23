@@ -22,6 +22,8 @@
   },
 
   "Booking": {
+    "airport": "Shang yi Airport",
+    "pier": "Shuitou Pier",
     "departure": "Departure Location",
     "arrival": "Arrival Location",
     "arrivalPortTime": "Arrival Port Time",
@@ -64,27 +66,26 @@
   "confirmationPage":{
     "title": "Order Confirmation",
     "tripInfo":"Trip Information",
+    "returnTripInfo":"Return Trip Information",
     "dateTime": "Thursday, January 2nd, 11:30 AM",
     "departure": "Shuitou Pier",
     "destination": "Shangyi Airport",
     "OrderTotal":"Order Total",
     "refundPolicy": "Refund Policy",
-    "adultTicket": "Adult Ticket x 1",
-    "infantTicket": "Infant Ticket x 1",
+    "adultTicket": "Adult Ticket X",
+    "infantTicket": "Infant Ticket X",
     "total": "Total",
     "currency": "¥",
     "amount": "30.00",
-    "submitOrder": "Submit Order",
-    "footer": {
+    "submitOrder": "Submit Order"
+  },
+  "reminder": {
     "notice": "Kind Reminder:",
-    "tips": [
-      "1. Please make sure the ticket information is correct.",
-      "2. Online ticket booking for shuttle buses closes at 8:00 PM the day before.",
-      "3. The estimated travel time from Kinmen Pier to the airport is 15-20 minutes. To avoid affecting your trip, ensure there is at least a 90-minute interval between flight arrival and departure times. Plan your trip carefully and allow enough time for check-in, baggage drop-off, and security procedures. Any inconvenience or loss caused by insufficient time will be borne by the passenger.",
-      "4. Online ticket refunds are available up to 90 minutes before the departure time.",
-      "5. Tickets are valid only on the day of the trip. Unused tickets will be automatically refunded to the original payment channel within 3-5 business days."
-    ]
-  }
+    "tips1": "1. Please make sure the ticket information is correct.",
+    "tips2": "2. Online ticket booking for shuttle buses closes at 8:00 PM the day before.",
+    "tips3": "3. The estimated travel time from Kinmen Pier to the airport is 15-20 minutes. To avoid affecting your trip, ensure there is at least a 90-minute interval between flight arrival and departure times. Plan your trip carefully and allow enough time for check-in, baggage drop-off, and security procedures. Any inconvenience or loss caused by insufficient time will be borne by the passenger.",
+    "tips4": "4. Online ticket refunds are available up to 90 minutes before the departure time.",
+    "tips5": "5. Tickets are valid only on the day of the trip. Unused tickets will be automatically refunded to the original payment channel within 3-5 business days."
   },
   "accountInfo": {
     "title": "Account Information",

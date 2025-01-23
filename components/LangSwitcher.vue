@@ -18,8 +18,6 @@ const selectLanguage = (value: "zh-TW"| "zh-CN" | "en-US" ) => {
   isDropdownVisible.value = false; 
 };
 
-const languageNow = language;
-console.log("language now:" ,locale.value);
 </script>
 
 <template>

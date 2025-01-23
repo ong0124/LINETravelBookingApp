@@ -2,7 +2,7 @@
     <div class="h-screen">
         <div class="h-1/4 bg-green-400 ">
             <header class="flex items-center py-4">
-                <Icon name="tabler-arrow-back-up" class="mr-1 bg-white ml-4"/>
+              <BackBtn/>
                 <h1 class="absolute left-1/2 transform -translate-x-1/2 text-base font-bold capitalize text-white ">
                   {{ $t("accountInfo.title") }}
                 </h1>
