@@ -57,7 +57,6 @@ export default defineNuxtConfig({
     storage: {
       cache: {
         driver: 'fs', // 文件系統作為緩存驅動
-        base: './.nitro/cache', // 設定緩存文件的基準路徑
       },
     },
     prerender: {
