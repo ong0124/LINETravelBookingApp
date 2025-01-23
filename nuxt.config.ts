@@ -48,14 +48,16 @@ export default defineNuxtConfig({
   vite: {
     resolve: {
       alias: {
-        '@/': `${__dirname}/`, // 将 `@/` 映射为项目根目录
+        '@/': `${__dirname}/`,
+        '~': `${__dirname}`, // 将 `@/` 映射为项目根目录
       },
     },
   },
   nitro: {
     storage: {
       cache: {
-        driver: 'fs', // 使用文件系統作為緩存驅動
+        driver: 'fs', // 文件系統作為緩存驅動
+        base: './.nitro/cache', // 設定緩存文件的基準路徑
       },
     },
   },
