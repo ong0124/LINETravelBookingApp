@@ -94,7 +94,26 @@
     "phone": "Phone",
     "email": "Email",
     "saveButton": "Save"
-  }
+  },
+  "PopUpRules":{
+    "title1": "1. Ticket Prices and Eligibility:",
+    "general_ticket": "1. General Ticket: 30 TWD, applicable to passengers occupying a regular seat.",
+    "infant_ticket": "2. Infant Ticket: Free, applicable to passengers under 2 years old.",
+    "title2": "2. Ticket Purchase and Order Information",
+    "notice": "1. Please read the 'Shuttle Bus Ticket Purchase Notice' carefully before purchasing tickets.",
+    "real_info": "2. Please ensure all information provided is accurate and valid to avoid delays in your journey.",
+    "online_deadline": "3. Online ticket sales close at 8:00 PM the day before departure.",
+    "refund_deadline": "4. Online ticket refunds close 90 minutes before departure.",
+    "ticket_validity": "5. Tickets are valid only on the day of departure. Unused tickets will be automatically refunded to the original payment method within 3-5 business days.",
+    "contact": "6. For inquiries, please contact Ms. Lu (Phone: 0910122683, WeChat: km0910122683).",
+    "title3": "3. Shuttle Bus Service",
+    "process": "1. Passengers taking the shuttle bus are advised to refer to the 'Shuttle Process and Schedule.'",
+    "safety": "2. To ensure safety, passengers are prohibited from bringing weapons or other contraband onto the bus. Passengers are responsible for any legal liabilities.",
+    "valuables": "3. Please carry your valuables with you and keep them safe.",
+    "insurance": "4. Tickets include passenger insurance coverage of up to 1.5 million TWD.",
+    "invoice": "5. To request an invoice, please contact Ms. Lu in advance (Phone: 0910122683, WeChat: km0910122683). Invoices can be collected from the shuttle staff upon arrival in Kinmen."
+  },
+  "okButton":"OK"
 }
 
   
