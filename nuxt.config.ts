@@ -13,7 +13,6 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@nuxtjs/i18n',
   ],
-  
   i18n: {
     lazy: true,
     langDir: "locales",
@@ -61,7 +60,7 @@ export default defineNuxtConfig({
     },
     prerender: {
       routes: [
-        '/LINETravelBookingApp/'
+        '/'
       ],
     },
   },
