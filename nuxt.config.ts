@@ -41,7 +41,7 @@ export default defineNuxtConfig({
   },
   
   app: {
-    baseURL: '/LINETravelBookingApp/zh-TW', // 确保路径正确
+    baseURL: '/LINETravelBookingApp/', // 确保路径正确
     buildAssetsDir: '/_nuxt/', // 静态资源路径
   },
   vite: {
@@ -57,7 +57,7 @@ export default defineNuxtConfig({
       crawlLinks: true,
       failOnError: false,
       routes: [
-        '/',         // 根路由（通常是重定向）
+        'LINETravelBookingApp/',         // 根路由（通常是重定向）
         '/en-US',       // 英文首頁
         '/zh-CN',    // 中文首頁
         '/zh-TW',       // 法文首頁（如果支持）
