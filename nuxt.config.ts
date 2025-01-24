@@ -6,6 +6,15 @@ export default defineNuxtConfig({
   experimental: {
     appManifest: false,
   },
+  hooks: {
+    // 修改 Nitro 配置的钩子
+    'nitro:config'(nitroConfig) {
+      // 确保首页路径 '/' 被添加到静态生成路由中
+      if (nitroConfig.prerender.routes.indexOf('/') === -1) {
+        nitroConfig.prerender.routes.push('/');
+      }
+    },
+  },
   modules: [
     '@ant-design-vue/nuxt',
     '@nuxtjs/tailwindcss',
@@ -57,10 +66,10 @@ export default defineNuxtConfig({
       crawlLinks: true,
       failOnError: false,
       routes: [
-        'LINETravelBookingApp/',         // 根路由（通常是重定向）
-        '/en-US',       // 英文首頁
-        '/zh-CN',    // 中文首頁
-        '/zh-TW',       // 法文首頁（如果支持）
+        '/LINETravelBookingApp/',         // 根路由（通常是重定向）
+        '/LINETravelBookingApp/en-US',       // 英文首頁
+        '/LINETravelBookingApp/zh-CN',    // 中文首頁
+        '/LINETravelBookingApp/zh-TW',       // 法文首頁（如果支持）
       ],
     }
   }
