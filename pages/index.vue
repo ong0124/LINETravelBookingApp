@@ -16,13 +16,6 @@
             <div v-if="activeTab === 2">
                 <RoundedWayTicket/>
             </div>
-<!-- 
-              <div class="pt-1 pb-4 flex justify-center">
-                <a-button
-                  type="primary"
-                  @click="navigateToConfirmation"
-                 class="w-2/3 rounded-lg bg-green-500 text-white">{{ $t('HomePage.confirm') }}</a-button>
-              </div> -->
         </div>
     </div>
 </template>
