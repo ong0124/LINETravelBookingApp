@@ -37,44 +37,24 @@ import { useI18n } from 'vue-i18n';
 
 
 export default defineComponent({
-  data() {
-    return {
-      activeTab: 1,
-    };
-  },
-  methods: {
-    showContent(tab :number) {
-      this.activeTab = tab;
-    },
-  },
-  
+   
   setup() {
     const localPath = useLocalePath();
     const isChecked = ref(false); // 定義復選框狀態
+    const activeTab = ref(1);
+    const showContent = (tab: number) => {
+      activeTab.value = tab;
+    };
 
     // 打开通知
     const { t } = useI18n();
-    const openNotification = (placement: NotificationPlacement) => {
-      notification.open({
-        message: t('HomePage.notification.title') ,
-        description: t('HomePage.notification.description'),
-        placement,
-      });
-    };
-    // 點擊確認按鈕的邏輯
-    const navigateToConfirmation = () => {
-      if (!isChecked.value) {
-        openNotification('bottom'); // 如果未勾選，彈出通知
-      } else {
-        const path = localPath('/confirmationPage');
-        navigateTo(path); // 如果勾選，跳轉
-      }
-    };
-
+   
     return {
+      t,
+      activeTab,
       isChecked,
-      navigateToConfirmation,
-    };
+      showContent,
+      };
   },
 });
 </script>

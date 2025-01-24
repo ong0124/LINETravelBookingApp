@@ -354,6 +354,7 @@ export default defineComponent({
     };
 
     return {
+      t,
       tab,
       isSwapped,
       antLocale,

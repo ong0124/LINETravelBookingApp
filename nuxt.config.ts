@@ -39,7 +39,7 @@ export default defineNuxtConfig({
     ],
     defaultLocale: "zh-TW",
   },
-
+  
   app: {
     baseURL: '/LINETravelBookingApp/', // 确保路径正确
     buildAssetsDir: '/_nuxt/', // 静态资源路径
@@ -50,18 +50,6 @@ export default defineNuxtConfig({
         '@/': `${__dirname}/`,
         '~': `${__dirname}`, // 将 `@/` 映射为项目根目录
       },
-    },
-  },
-  nitro: {
-    storage: {
-      cache: {
-        driver: 'fs', // 文件系統作為緩存驅動
-      },
-    },
-    prerender: {
-      routes: [
-        '/'
-      ],
     },
   },
 })

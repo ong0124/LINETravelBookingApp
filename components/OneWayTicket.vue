@@ -253,6 +253,7 @@ export default defineComponent({
     };
 
     return {
+      t,
       tab,
       antLocale,
       isChecked,

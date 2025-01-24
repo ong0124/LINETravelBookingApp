@@ -87,25 +87,24 @@ export default defineComponent({
     const tab = (route.query.tab || '未提供');
 
     console.log('tab 的值:', tab);
-    const adult = route.query.adult || '未提供';
-    const child = route.query.child || '未提供';
-    const totalPrice = route.query.totalPrice || '未提供';
+    const adult = route.query.adult || '0';
+    const child = route.query.child || '0';
+    const totalPrice = route.query.totalPrice || '0';
     const DateArrivalShip = route.query.DateArrivalShip || '未提供';
     const DateShuttle = route.query.DateShuttle || '未提供';
     const TimeArrivalShip = route.query.TimeArrivalShip || '未提供';
     const TimeShuttle = route.query.TimeShuttle || '未提供';
     const phone = route.query.phone || '未提供';
     const contact = route.query.contact || '未提供';
-
-    // 动态翻译 `from` 和 `to`
+    
     const p2 = route.query.p2;
     const p3 = route.query.p3;
     const p4 =route.query.p4;
     const p5 =route.query.p5;
-    const translatedp2 = computed(() => t(p2 as string));
-    const translatedp3 = computed(() => t(p3 as string));
-    const translatedp4 = computed(() => t(p4 as string));
-    const translatedp5 = computed(() => t(p5 as string));
+    const translatedp2 = computed(() => t(p2 as string|| 'defaultKey'));
+    const translatedp3 = computed(() => t(p3 as string|| 'defaultKey'));
+    const translatedp4 = computed(() => t(p4 as string|| 'defaultKey'));
+    const translatedp5 = computed(() => t(p5 as string|| 'defaultKey'));
 
     const DateArrivalShipReturn = route.query.DateArrivalShipReturn || '未提供';
     const DateShuttleReturn = route.query.DateShuttleReturn || '未提供';
@@ -113,6 +112,7 @@ export default defineComponent({
     const TimeShuttleReturn = route.query.TimeShuttleReturn || '未提供';
     
     return {
+        t,
       tab,
       adult,
       child,
