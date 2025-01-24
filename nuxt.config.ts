@@ -56,6 +56,12 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       failOnError: false,
+      routes: [
+        '/',         // 根路由（通常是重定向）
+        '/en-US',       // 英文首頁
+        '/zh-CN',    // 中文首頁
+        '/zh-TW',       // 法文首頁（如果支持）
+      ],
     }
   }
 })
