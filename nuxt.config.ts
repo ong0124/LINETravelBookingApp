@@ -8,17 +8,24 @@ export default defineNuxtConfig({
   },
   hooks: {
     'nitro:config'(nitroConfig) {
-      // 确保 prerender 存在
+      // Ensure `prerender` exists
       if (!nitroConfig.prerender) {
-        nitroConfig.prerender = { routes: [] }; // 初始化为默认值
+        nitroConfig.prerender = { routes: [] };
       }
 
-      // 确保 routes 数组存在
+      // Ensure `routes` array exists
       nitroConfig.prerender.routes = nitroConfig.prerender.routes ?? [];
 
-      // 添加路径 '/'
-      if (!nitroConfig.prerender.routes.includes('/')) {
-        nitroConfig.prerender.routes.push('/');
+      // Add the baseURL prefix to dynamically added routes
+      const baseURL = '/LINETravelBookingApp';
+      const dynamicRoutes = ['/', '/en-US', '/zh-CN', '/zh-TW'].map(
+        (route) => `${baseURL}${route}`
+      );
+
+      for (const route of dynamicRoutes) {
+        if (!nitroConfig.prerender.routes.includes(route)) {
+          nitroConfig.prerender.routes.push(route);
+        }
       }
     },
   },
@@ -70,7 +77,7 @@ export default defineNuxtConfig({
   },
   nitro: {
     prerender: {
-      crawlLinks: true,
+      crawlLinks: false,
       failOnError: false,
       routes: [
         '/LINETravelBookingApp/',         // 根路由（通常是重定向）
