@@ -7,10 +7,17 @@ export default defineNuxtConfig({
     appManifest: false,
   },
   hooks: {
-    // 修改 Nitro 配置的钩子
     'nitro:config'(nitroConfig) {
-      // 确保首页路径 '/' 被添加到静态生成路由中
-      if (nitroConfig.prerender.routes.indexOf('/') === -1) {
+      // 确保 prerender 存在
+      if (!nitroConfig.prerender) {
+        nitroConfig.prerender = { routes: [] }; // 初始化为默认值
+      }
+
+      // 确保 routes 数组存在
+      nitroConfig.prerender.routes = nitroConfig.prerender.routes ?? [];
+
+      // 添加路径 '/'
+      if (!nitroConfig.prerender.routes.includes('/')) {
         nitroConfig.prerender.routes.push('/');
       }
     },
